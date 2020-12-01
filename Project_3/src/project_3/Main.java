@@ -32,16 +32,19 @@ import java.util.Scanner;
 				reader.next() == "!=" ||
 				reader.next() == "&&" ||
 				reader.next() == "||" ) {
-				//Create new treenode containing operator
+				treeNode newNode;
+				//Line to make newNode contain operator
 				
-				//New treeNode^.nodeRight = nodeStack.pop();
-				//New treeNode^.nodeLeft = nodeStack.pop();
 				
-				//nodeStack.push(new treeNode^)
+				newNode.nodeRight = nodeStack.pop();
+				newNode.nodeLeft = nodeStack.pop();
+				
+				nodeStack.push(newNode);
 			}
 			else {					//If not operator, must be operand
-				//Create new treeNode containing operand
-				//nodeStack.push(new  treeNode^);
+				treeNode oprNode;//Create new treeNode containing operand
+				//Line to make oprNode contain operator
+				nodeStack.push(oprNode);
 			}
 				
 		}

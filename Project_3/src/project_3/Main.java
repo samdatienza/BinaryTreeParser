@@ -9,11 +9,11 @@ public class Main {
 		Scanner reader = new Scanner(System.in);
 		
 		while (reader.hasNext()) {
-			// Will read from file and adding spaces of {expression} at the same time if need be
+			// Will read from user input and add spaces to {expression} at the same time if need be
 			String expression = AddSpaces.addSpaces(reader.nextLine());
 		}
 		
-		// Closing {reader} and {inputFile}
+		// Closing {reader}
 		reader.close();
 	}
 }

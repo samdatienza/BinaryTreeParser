@@ -63,11 +63,12 @@ public class Main {
 			Tree t1 = new Tree();
 			// Will read from user input and add spaces to {expression} at the same time if need be
 			System.out.print("Enter an infix expression -> ");
-			String expression = AddSpaces.addSpaces(reader.nextLine());
+			String expression = reader.nextLine();
 			System.out.println(expression);
 			t1.insert(expression);
 			expression = t1.traverse();
 			System.out.println(expression);
+			PostfixEvaluation.postfixEval(expression);
 			System.out.print("If you wish to stop type \"n\". -> ");
 			input = reader.nextLine().charAt(0);
 			if (input == 'n') { cont = false; }

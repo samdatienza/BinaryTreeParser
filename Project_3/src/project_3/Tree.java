@@ -2,7 +2,7 @@ package project_3;
 
 public class Tree {
 	private treeNode root;
-	private String postfix;
+	private String postfix = "";
 	
 	public Tree() { root = null; }
 	
@@ -15,8 +15,7 @@ public class Tree {
 		char symbol = expression.charAt(i);
 		treeNode newNode;
 		while (symbol != '#') {
-			if (symbol >= '0' && symbol <= '9' || symbol >= 'A' && symbol <= 'Z' ||
-					symbol >= 'a' && symbol <= 'z') {
+			if (symbol >= '0' && symbol <= '9') {
 				newNode = new treeNode(symbol);
 				stk.push(newNode);
 			}
@@ -43,6 +42,7 @@ public class Tree {
 			postOrder(localRoot.nodeLeft);
 			postOrder(localRoot.nodeRight);
 			postfix += localRoot.data;
+			postfix += " ";
 		}
 	}
 	

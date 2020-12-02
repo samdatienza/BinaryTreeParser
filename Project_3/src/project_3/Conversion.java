@@ -56,6 +56,7 @@ public class Conversion {
 				else { output += opTop; }
 			}
 		}
+		c.push(opThis);
 	}
 	
 	private void gotParenthesis() {

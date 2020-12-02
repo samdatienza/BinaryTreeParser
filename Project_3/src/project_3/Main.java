@@ -1,8 +1,8 @@
 package project_3;
 
-import java.io.FileInputStream;
-import java.util.Scanner;
+import java.util.*;
 
+// Using https://www.sanfoundry.com/java-program-construct-expression-tree-infix-expression/ for help
 
 /*
 	//Build tree method
@@ -56,10 +56,21 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		// Scanner reads from user input string
 		Scanner reader = new Scanner(System.in);
+		boolean cont = true;
+		char input;
 		
-		while (reader.hasNext()) {
+		while (cont) {
+			Tree t1 = new Tree();
 			// Will read from user input and add spaces to {expression} at the same time if need be
+			System.out.print("Enter an infix expression -> ");
 			String expression = AddSpaces.addSpaces(reader.nextLine());
+			System.out.println(expression);
+			t1.insert(expression);
+			expression = t1.traverse();
+			System.out.println(expression);
+			System.out.print("If you wish to stop type \"n\". -> ");
+			input = reader.nextLine().charAt(0);
+			if (input == 'n') { cont = false; }
 		}
 		
 		// Closing {reader}

@@ -1,4 +1,4 @@
-package sem2project3;
+package project_3;
 
 public class treeNode {
 	
